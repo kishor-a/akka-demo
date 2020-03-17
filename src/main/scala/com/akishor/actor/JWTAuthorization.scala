@@ -23,7 +23,7 @@ object JWTAuthorization extends App with SprayJsonSupport {
   implicit val system = ActorSystem()
   implicit val materializer = ActorMaterializer()
   import system.dispatcher
-
+  import SecurityDomain.loginRequestFormat
 
 
   val credentialsDb = Map(
